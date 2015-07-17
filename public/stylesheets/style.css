@@ -1,8 +1,16 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+h6#email {
+  font-size: 1rem;
+  line-height: 110%;
+  margin: -1.5rem 0 0.4rem 0px !important;
 }
 
-a {
-  color: #00B7FF;
+#logout{
+  margin-right: 2rem;
+}
+
+div#currentState {
+  position: fixed;
+  right: 0px;
+  top: 0;
 }
