@@ -37,12 +37,12 @@ angular.module("weather")
           console.log(newState);
           console.log(newCity);
 
-          $http.get("http://api.wunderground.com/api/f522dfed0b75cf28/conditions/q/" + newState + "/" + newCity + ".json")
+          $http.get("//api.wunderground.com/api/f522dfed0b75cf28/conditions/q/" + newState + "/" + newCity + ".json")
           .success(function(data, status){
             console.log("conditions: ", data);
             $scope.conditions = data.current_observation;
           });
-          $http.get("http://api.wunderground.com/api/f522dfed0b75cf28/forecast/q/" + newState + "/" + newCity + ".json")
+          $http.get("//api.wunderground.com/api/f522dfed0b75cf28/forecast/q/" + newState + "/" + newCity + ".json")
           .success(function(data, status){
             console.log("forecast: ", data);
             $scope.forecast = data.forecast.txt_forecast.forecastday;
@@ -59,7 +59,7 @@ angular.module("weather")
     getCoords(googleLocation);
   }
   function googleLocation(){
-    $http.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&sensor=true")
+    $http.get("//maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&sensor=true")
     .success(function(data, status){
       console.log(data);
       city = data.results[0].address_components[3].short_name.split(' ').join('_');
@@ -72,12 +72,12 @@ angular.module("weather")
       $scope.state = state;
       $scope.address = address;
 
-      $http.get("http://api.wunderground.com/api/f522dfed0b75cf28/conditions/q/" + state + "/" + city + ".json")
+      $http.get("//api.wunderground.com/api/f522dfed0b75cf28/conditions/q/" + state + "/" + city + ".json")
       .success(function(data, status){
         console.log("conditions: ", data);
         $scope.conditions = data.current_observation;
       });
-      $http.get("http://api.wunderground.com/api/f522dfed0b75cf28/forecast/q/" + state + "/" + city + ".json")
+      $http.get("//api.wunderground.com/api/f522dfed0b75cf28/forecast/q/" + state + "/" + city + ".json")
       .success(function(data, status){
         console.log("forecast: ", data);
         $scope.forecast = data.forecast.txt_forecast.forecastday;
