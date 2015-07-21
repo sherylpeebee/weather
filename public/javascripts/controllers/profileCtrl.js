@@ -65,6 +65,7 @@ angular.module("weather")
       city = data.results[0].address_components[3].short_name.split(' ').join('_');
       state = data.results[0].address_components[5].short_name;
       address = data.results[0].formatted_address;
+
       // console.log(city.split(' ').join('_'));
       // console.log(city, state, address);
 
