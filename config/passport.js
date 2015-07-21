@@ -21,10 +21,6 @@ module.exports = function(passport) {
         });
     });
 
-    // code for login (use('local-login', new LocalStategy))
-    // code for signup (use('local-signup', new LocalStategy))
-    // code for facebook (use('facebook', new FacebookStrategy))
-    // code for twitter (use('twitter', new TwitterStrategy))
     passport.use('local-signup', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email
         usernameField : 'email',
@@ -99,11 +95,13 @@ module.exports = function(passport) {
 
       }));
 
+    passport.use(new GoogleStrategy({
 
-    // =========================================================================
-    // GOOGLE ==================================================================
-    // =========================================================================
+        clientID        : process.env.GOOGLE_CLIENT_ID,
+        clientSecret    : process.env.GOOGLE_CLIENT_SECRET,
+        callbackURL     : process.env.CALLBACK_URL
 
+    },
     function(token, refreshToken, profile, done) {
 
         // make the code asynchronous

@@ -18,7 +18,8 @@ var users = require('./routes/users');
 
 
 var mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/Data/weather');
+// mongoose.connect('mongodb://localhost/Data/weather');
+mongoose.connect(process.env.MONGOLAB_URI);
 
 var app = express();
 

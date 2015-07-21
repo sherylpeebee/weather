@@ -1,8 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Codystar|Pompiere|Wire+One|Gruppo|Raleway+Dots|Kranky);
 
 h6#email {
   font-size: 1rem;
   line-height: 110%;
   margin: -1.5rem 0 0.4rem 0px !important;
+  color: aliceblue;
 }
 
 #logout{
@@ -13,4 +15,99 @@ div#currentState {
   position: fixed;
   right: 0px;
   top: 0;
+}
+
+.card .card-action {
+  border-top: 1px solid rgba(160,160,160,0.2);
+  /* padding: 20px; */
+  height: 107px;
+  height: 201px;
+  top: 15px;
+  position: relative;
+  top: -26px;
+  text-align: center;
+}
+body{
+  background-color: cornflowerblue;
+  font-family: 'Raleway Dots', cursive;
+}
+
+h5#cityState{
+color: aliceblue;
+position: relative;
+left: -180px;
+}
+h5{
+  color: aliceblue;
+}
+h6{
+color: aliceblue;
+}
+span{
+  color: aliceblue;
+}
+
+img {
+  border: 0;
+  position: relative;
+  top: -59px;
+  left: 378px;
+  right: 0px;
+}
+
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+  position: relative;
+  bottom: 20px;
+}
+
+h1.center {
+  position: relative;
+  bottom: 90px;
+}
+
+.row .col.l1 {
+  width: 10.33333%;
+  margin-left: 0;
+}
+
+.divider {
+  height: 1px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  bottom: 81px;
+  position: relative;
+  width: 70vw;
+  left: 194px;
+}
+
+h5#cityState.ng-binding:hover {
+  color: aquamarine;
+  font-stretch: ultra-expanded;
+  font-style: inherit;
+  font-size: 2em;
+  cursor: pointer;
+}
+p.today.ng-binding {
+  font-size: 1.2em;
+}
+.col.m4 {
+  display: inline-block;
+  float: left;
+  margin-left: 30px;
+}
+
+div#now {
+  margin-left: 14%;
+}
+
+@media screen
+and (max-device-width : 667px)
+and (min-device-width : 375px){
+  h1.center {
+   position: relative;
+   bottom: 90px;
+   top: 10px;
+  }
 }
