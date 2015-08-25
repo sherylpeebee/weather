@@ -28,14 +28,24 @@ div#currentState {
   text-align: center;
 }
 body{
-  background-color: cornflowerblue;
+  /*background-color: cornflowerblue;*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#207cca+29,6495ed+84 */
+background: #207cca; /* Old browsers */
+background: -moz-linear-gradient(top,  #207cca 29%, #6495ed 84%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(29%,#207cca), color-stop(84%,#6495ed)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #207cca 29%,#6495ed 84%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #207cca 29%,#6495ed 84%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #207cca 29%,#6495ed 84%); /* IE10+ */
+background: linear-gradient(to bottom,  #207cca 29%,#6495ed 84%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207cca', endColorstr='#6495ed',GradientType=0 ); /* IE6-9 */
+
   font-family: 'Raleway Dots', cursive;
 }
 
-h5#cityState{
-color: aliceblue;
-position: relative;
-left: -180px;
+h5#cityState {
+    color: aliceblue;
+    position: relative;
+    right: 20%;
 }
 h5{
   color: aliceblue;
@@ -56,10 +66,11 @@ img {
 }
 
 .card .card-content p {
-  margin: 0;
-  color: inherit;
-  position: relative;
-  bottom: 20px;
+    margin: 0;
+    color: inherit;
+    position: relative;
+    bottom: 20px;
+    font-size: 2em;
 }
 
 h1.center {
@@ -73,25 +84,38 @@ h1.center {
 }
 
 .divider {
-  height: 1px;
-  overflow: hidden;
-  background-color: #e0e0e0;
-  bottom: 81px;
-  position: relative;
-  width: 70vw;
-  left: 194px;
+    height: 1px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    bottom: 81px;
+    position: relative;
+    width: 70vw;
+    left: 15%;
 }
 
-h5#cityState.ng-binding:hover {
-  color: aquamarine;
-  font-stretch: ultra-expanded;
-  font-style: inherit;
-  font-size: 2em;
-  cursor: pointer;
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    transition: all .3s;
+    color: aliceblue;
 }
+
 p.today.ng-binding {
-  font-size: 1.2em;
+    font-size: 1.5em;
 }
+
 .col.m4 {
   display: inline-block;
   float: left;
@@ -99,7 +123,7 @@ p.today.ng-binding {
 }
 
 div#now {
-  margin-left: 14%;
+  margin-left: 22%;
 }
 
 @media screen
@@ -110,4 +134,30 @@ and (min-device-width : 375px){
    bottom: 90px;
    top: 10px;
   }
+}
+
+span.card-title.ng-binding {
+    font-variant: small-caps;
+    /*text-decoration: underline;*/
+}
+
+div#hint {
+    font-size: 26px;
+    color: beige;
+    margin-bottom: -32px;
+    text-decoration: underline;
+    font-variant: small-caps;
+}
+div#hint:hover {
+    font-size: 26px;
+    color: beige;
+    margin-bottom: -32px;
+    text-decoration: underline;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+
+div#hint:hover {
+    color: #E48CAD;
+    font-weight: 900;
 }

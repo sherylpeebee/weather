@@ -94,5 +94,9 @@ angular.module("weather")
     });
   }
 
+  $scope.getDayDetails = function(day){
+    console.log(day);
+  };
+
 
 }]);

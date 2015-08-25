@@ -34,8 +34,8 @@
       <br>
       <br>
       <div class="col m4">
-        <h5>Change City, State</h5>
-        <input type="text" name="name" id="newLocation">
+        <h5>Enter city and state</h5>
+        <input type="text" name="name" id="newLocation" placeholder="ex: Cupertino, CA">
       </div>
       <div class="col m4" id="now">
         <h4>Today's Conditions</h4>
@@ -52,7 +52,7 @@
     <a href="/logout" id="logout" class="btn btn-default btn-sm">Logout</a>
   </div>
   <div class="container">
-    <h5 id="cityState" class="toggle-panel">{{city}}, {{state}}</h5>
+    <h5 id="cityState" >{{city}}, {{state}}</h5>
   </div>
 
   <div class="row">
@@ -62,7 +62,10 @@
   </div>
 <div class="row">
   <header class="col s1 m12 l12">
-    <h1 class="center">Your Forecast For the Week</h1>
+    <h1 class="center">Your Forecast For the Week <div id="hint" class="toggle-panel">
+      view details/change your location
+    </div></h1>
+
   </header>
   <div class="divider">
   </div>
@@ -74,15 +77,15 @@
       <div class="col s12 m6 l6" ng-repeat="day in forecast">
         <div class="card blue-grey darken-1 z-depth-3" style="height: 195px">
           <div class="card-content white-text" style="height: 170px">
-            <span class="card-title">{{day.title}}</span>
-            <div><img ng-src="{{day.icon_url}}" style="height: 30px" alt="" /></div>
+            <span class="card-title" ng-click="getDayDetails(day.title)">{{day.title}}</span>
+            <div><img ng-src="{{day.icon_url}}" style="height: 50px" alt="" /></div>
             <p class="" >
                 {{day.fcttext}}
             </p>
           </div>
-          <div class="card-action valign-wrapper center" style="height: 63px">
+          <%# <div class="card-action valign-wrapper center" style="height: 63px">
             <a  class="valign tooltipped" data-delay="50" data-position="top" data-tooltip="Click the top left for current conditions">Learn More</a>
-          </div>
+          </div>%>
         </div>
       </div>
     </div>
